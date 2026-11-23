@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 from app.api.v1.router import api_router
 from app.core.config import settings
 from app.core.database import Base, engine, get_db
-from app.models import Contract, Project, Proposal, User  # noqa: F401
+from app.models import Contract, Milestone, Project, Proposal, Review, User  # noqa: F401
 
 Base.metadata.create_all(bind=engine)
 

@@ -31,6 +31,9 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                   <Link to="/projects" className="text-slate-600 hover:text-slate-900">
                     Dự án
                   </Link>
+                  <Link to="/contracts" className="text-slate-600 hover:text-slate-900">
+                    Hợp đồng
+                  </Link>
                 </>
               )}
               {user?.role === 'client' && (

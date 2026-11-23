@@ -1,4 +1,5 @@
-import { Link, useNavigate, type ReactNode } from 'react-router-dom'
+import type { ReactNode } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 
 export default function MainLayout({ children }: { children: ReactNode }) {
@@ -23,9 +24,14 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 Trang chủ
               </Link>
               {user && (
-                <Link to="/dashboard" className="text-slate-600 hover:text-slate-900">
-                  Dashboard
-                </Link>
+                <>
+                  <Link to="/dashboard" className="text-slate-600 hover:text-slate-900">
+                    Dashboard
+                  </Link>
+                  <Link to="/projects" className="text-slate-600 hover:text-slate-900">
+                    Dự án
+                  </Link>
+                </>
               )}
               {user?.role === 'client' && (
                 <span className="rounded bg-amber-50 px-2 py-0.5 text-xs text-amber-700">
